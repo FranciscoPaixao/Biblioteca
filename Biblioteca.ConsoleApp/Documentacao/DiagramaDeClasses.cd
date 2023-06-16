@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Biblioteca.ConsoleApp.Emprestimo.Emprestimo">
+    <Position X="12.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAEAAAEAABAAAAAAAAAAAAACAAAAAAgAAA=</HashCode>
+      <FileName>Emprestimo\Emprestimo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.ConsoleApp.Compartilhado.RepositorioBase&lt;TEntidade&gt;">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAMAAAACQAAAAACAAABAAAAAAEQAAA=</HashCode>
+      <FileName>Compartilhado\RepositorioBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.ConsoleApp.ModuloLivro.Livro">
+    <Position X="15.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQgAAAAEAAABAAAAAABgAAAAAAAAEAAoAAA=</HashCode>
+      <FileName>ModuloLivro\Livro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.ConsoleApp.ModuloUsuario.Usuario">
+    <Position X="10" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgSAAAAAEAAAAAAAAAAAAAAAAAAAgAAEgEAA=</HashCode>
+      <FileName>ModuloUsuario\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.ConsoleApp.Compartilhado.EntidadeBase&lt;TEntidade&gt;">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAgA=</HashCode>
+      <FileName>Compartilhado\EntidadeBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
