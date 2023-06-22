@@ -8,16 +8,14 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.ConsoleApp.ModuloLivro
 {
-    public class CLILivro
+    public class CLILivro : CLIBase
     {
-        private RepositorioBase<Livro> repLivro;
-        public CLILivro(RepositorioBase<Livro> repLivro)
+        public CLILivro(RepositorioLivro repLivro)
         {
             this.repLivro = repLivro;
         }
         public void MenuLivro(bool statusOpcao = false)
         {
-            Console.WriteLine("Pressione qualquer tecla para voltar ao menu do livro");
             if (statusOpcao)
             {
                 Console.Clear();
@@ -27,7 +25,6 @@ namespace Biblioteca.ConsoleApp.ModuloLivro
             }
             else
             {
-                Console.ReadKey();
                 Console.Clear();
             }
             Console.WriteLine("============================");
@@ -64,6 +61,8 @@ namespace Biblioteca.ConsoleApp.ModuloLivro
                     statusOpcao = true;
                     break;
             }
+            Console.WriteLine("Pressione qualquer tecla para voltar ao menu do livro");
+            Console.ReadKey();
             MenuLivro(statusOpcao);
         }
         public void CadastrarLivro() { 
@@ -75,6 +74,9 @@ namespace Biblioteca.ConsoleApp.ModuloLivro
 
             Console.Write("Digite o título do livro: ");
             novoLivro.titulo = Console.ReadLine();
+
+            Console.WriteLine("Digite o ISBN do livro: ");
+            novoLivro.isbn = Console.ReadLine();
 
             Console.Write("Digite o autor do livro: ");
             novoLivro.autor = Console.ReadLine();
@@ -111,16 +113,19 @@ namespace Biblioteca.ConsoleApp.ModuloLivro
             Console.WriteLine("Livro encontrado:");
             Console.WriteLine("===============================");
 
-            Console.Write("Digite o título do livro: ");
+            Console.Write("Digite o novo título do livro: ");
             livro.titulo = Console.ReadLine();
 
-            Console.Write("Digite o autor do livro: ");
+            Console.WriteLine("Digite o novo ISBN do livro: ");
+            livro.isbn = Console.ReadLine();
+
+            Console.Write("Digite o novo autor do livro: ");
             livro.autor = Console.ReadLine();
 
             Console.Write("Digite o ano de publicação do livro: ");
             livro.anoPublicacao = int.Parse(Console.ReadLine());
 
-            Console.Write("Digite a editora do livro: ");
+            Console.Write("Digite a nova editora do livro: ");
             livro.editora = Console.ReadLine();
 
             Console.Write("Digite o número de páginas do livro: ");
@@ -134,24 +139,23 @@ namespace Biblioteca.ConsoleApp.ModuloLivro
         }
         public void ExcluirLivro()
         {
-
-        }
-        public void ListarLivros(string msg = "")
-        {
-            if(String.IsNullOrEmpty(msg))
+            Console.WriteLine("===============================");
+            Console.WriteLine("===== Exclusão de Livro =====");
+            Console.WriteLine("===============================");
+            ListarLivros("Livros disponíveis para exclusão:");
+            Console.Write("Digite o ID do livro que deseja excluir: ");
+            int id = int.Parse(Console.ReadLine());
+            Livro livro = repLivro.SelecionarPorId(id);
+            if (livro == null)
             {
-                Console.WriteLine("===== Lista de Livros =====");
                 Console.WriteLine("===============================");
-            }
-            else
-            {
-                Console.WriteLine(msg);
+                Console.WriteLine("Livro não encontrado");
                 Console.WriteLine("===============================");
+                return;
             }
-            foreach (Livro livro in repLivro.SelecionarTodos())
-            {
-                Console.WriteLine(livro);
-            }
+            repLivro.Excluir(id);
+            Console.WriteLine("===============================");
+            Console.WriteLine("Livro excluído com sucesso!");
         }
 
     }

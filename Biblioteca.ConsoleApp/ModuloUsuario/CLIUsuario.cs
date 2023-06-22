@@ -7,16 +7,15 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.ConsoleApp.ModuloUsuario
 {
-    public class CLIUsuario
+    public class CLIUsuario : CLIBase
     {
-        private RepositorioBase<Usuario> repUsuario;
-        public CLIUsuario(RepositorioBase<Usuario> repUsuario)
+        public CLIUsuario(RepositorioUsuario repUsuario)
         {
             this.repUsuario = repUsuario;
         }
         public void MenuUsuario(bool statusOpcao = false)
         {
-            Console.WriteLine("Pressione qualquer tecla para voltar ao menu do usuário");
+            
             if (statusOpcao)
             {
                 Console.Clear();
@@ -26,7 +25,6 @@ namespace Biblioteca.ConsoleApp.ModuloUsuario
             }
             else
             {
-                Console.ReadKey();
                 Console.Clear();
             }
             Console.WriteLine("===== Menu do Usuário =====");
@@ -62,6 +60,8 @@ namespace Biblioteca.ConsoleApp.ModuloUsuario
                     statusOpcao = true;
                     break;
             }
+            Console.WriteLine("Pressione qualquer tecla para voltar ao menu do usuário");
+            Console.ReadKey();
             MenuUsuario(statusOpcao);
         }
         public void CadastrarUsuario()
@@ -131,6 +131,7 @@ namespace Biblioteca.ConsoleApp.ModuloUsuario
 
         public void ExcluirUsuario()
         {
+            Console.WriteLine("===============================");
             Console.WriteLine("===== Exclusão de Usuário =====");
             Console.WriteLine("===============================");
             ListarUsuarios("Usuários disponíveis para exclusão:");
@@ -147,28 +148,10 @@ namespace Biblioteca.ConsoleApp.ModuloUsuario
 
             Console.WriteLine("Usuário encontrado!");
             
-            repUsuario.Excluir(usuario.id);
+            repUsuario.Excluir(id);
             
             Console.WriteLine("===============================");
             Console.WriteLine("Usuário excluído com sucesso!");
-            Console.WriteLine("===============================");
-        }
-        public void ListarUsuarios(string msg = "")
-        {
-            if (String.IsNullOrEmpty(msg))
-            {
-                Console.WriteLine("===== Lista de Usuários =====");
-                Console.WriteLine("===============================");
-            }
-            else
-            {
-                Console.WriteLine(msg);
-                Console.WriteLine("===============================");
-            }
-            foreach (Usuario usuario in repUsuario.SelecionarTodos())
-            {
-                Console.WriteLine(usuario);
-            }
             Console.WriteLine("===============================");
         }
     }

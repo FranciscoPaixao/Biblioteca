@@ -19,19 +19,40 @@ namespace Biblioteca.ConsoleApp.ModuloUsuario
         
         public string endereco;
 
-        public override void AtualizarInformacoes(Usuario entidade)
+        public Usuario(string nome = "", string email = "", string telefone = "", string numeroRG = "", string endereco = "")
         {
-            this.nome = entidade.nome;
-            this.email = entidade.email;
-            this.telefone = entidade.telefone;
-            this.numeroRG = entidade.numeroRG;
-            this.endereco = entidade.endereco;    
+            this.nome = nome;
+            this.email = email;
+            this.telefone = telefone;
+            this.numeroRG = numeroRG;
+            this.endereco = endereco;
         }
 
-        public override string ObterPropiedadeIndividualizadora()
+        public override void AtualizarInformacoes(Usuario entidade)
         {
-            return this.numeroRG;
+            if(!String.IsNullOrEmpty(entidade.nome))
+            {
+                this.nome = entidade.nome;
+            }
+            if (!String.IsNullOrEmpty(entidade.email))
+            {
+                this.email = entidade.email;
+            }
+            if (!String.IsNullOrEmpty(entidade.telefone))
+            {
+                this.telefone = entidade.telefone;
+            }
+            if (!String.IsNullOrEmpty(entidade.numeroRG))
+            {
+                this.numeroRG = entidade.numeroRG;
+            }
+            if (!String.IsNullOrEmpty(entidade.endereco))
+            {
+                this.endereco = entidade.endereco;
+            }
         }
+
+        public override string ObterPropiedadeIndividualizadora() => this.numeroRG;
 
         public override string ToString()
         {

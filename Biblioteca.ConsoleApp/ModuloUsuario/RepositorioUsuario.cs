@@ -18,5 +18,7 @@ namespace Biblioteca.ConsoleApp.ModuloUsuario
             }
             return false;
         }
+        public Usuario SelecionarPorRG(String RG) => listaRegistros.FirstOrDefault(x => x.numeroRG == RG);
+
     }
 }

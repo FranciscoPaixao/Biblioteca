@@ -28,18 +28,33 @@ namespace Biblioteca.ConsoleApp.ModuloLivro
 
         public override void AtualizarInformacoes(Livro entidade)
         {
-            this.titulo = entidade.titulo;
-            this.isbn = entidade.isbn;
-            this.autor = entidade.autor;
-            this.numeroPaginas = entidade.numeroPaginas;
-            this.editora = entidade.editora;
-            this.anoPublicacao = entidade.anoPublicacao;
+            if (!String.IsNullOrEmpty(entidade.titulo))
+            {
+                this.titulo = entidade.titulo;
+            }
+            if(!String.IsNullOrEmpty(entidade.isbn))
+            {
+                this.isbn = entidade.isbn;
+            }
+            if (!String.IsNullOrEmpty(entidade.autor))
+            {
+                this.autor = entidade.autor;
+            }
+            if (entidade.numeroPaginas > 0)
+            {
+                this.numeroPaginas = entidade.numeroPaginas;
+            }
+            if (!String.IsNullOrEmpty(entidade.editora))
+            {
+                this.editora = entidade.editora;
+            }
+            if (entidade.anoPublicacao > 0)
+            {
+                this.anoPublicacao = entidade.anoPublicacao;
+            }
         }
 
-        public override string ObterPropiedadeIndividualizadora()
-        {
-            return this.isbn;
-        }
+        public override string ObterPropiedadeIndividualizadora() => this.isbn;
 
         public override string ToString()
         {

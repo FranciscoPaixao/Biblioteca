@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Biblioteca.ConsoleApp.Emprestimo
+namespace Biblioteca.ConsoleApp.ModuloEmprestimo
 {
     public class RepositorioEmprestimo : RepositorioBase<Emprestimo>
     {
         public override bool ehDuplicado(Emprestimo entidade)
         {
-            int quantidade = listaRegistros.Count(x => x.idUsuario == entidade.idUsuario && x.listaLivros.Equals(entidade.listaLivros));
+            int quantidade = listaRegistros.Count(x => x.usuario.id == entidade.usuario.id && x.livro.id == entidade.livro.id);
             if (quantidade > 1)
             {
                 return true;

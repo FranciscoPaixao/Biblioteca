@@ -18,5 +18,7 @@ namespace Biblioteca.ConsoleApp.ModuloLivro
             }
             return false;
         }
+        public Livro SelecionarPorISBN(String isbn) => listaRegistros.FirstOrDefault(x => x.isbn == isbn);
+
     }
 }
