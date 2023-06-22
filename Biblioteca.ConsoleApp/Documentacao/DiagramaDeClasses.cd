@@ -1,65 +1,87 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Biblioteca.ConsoleApp.Emprestimo.Emprestimo">
-    <Position X="11.25" Y="2.75" Width="1.5" />
-    <InheritanceLine Type="Biblioteca.ConsoleApp.Compartilhado.EntidadeBase&lt;TEntidade&gt;" FixedToPoint="true">
-      <Path>
-        <Point X="12" Y="2.247" />
-        <Point X="12" Y="2.75" />
-      </Path>
-    </InheritanceLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAAFAABAAAAAQAAAAAQAAAAAAAAgAAA=</HashCode>
-      <FileName>Emprestimo\Emprestimo.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Biblioteca.ConsoleApp.Compartilhado.RepositorioBase&lt;TEntidade&gt;">
-    <Position X="4" Y="0.5" Width="1.5" />
+    <Position X="9" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAAAAAAAAMAAAACQAAAAACAAABAAAAAAEQAAA=</HashCode>
       <FileName>Compartilhado\RepositorioBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Biblioteca.ConsoleApp.ModuloLivro.Livro">
-    <Position X="13" Y="0.5" Width="1.5" />
+    <Position X="17" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQgAAAAEAAABAAAAAABgAAAAAAAAEAAoAAA=</HashCode>
       <FileName>ModuloLivro\Livro.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Biblioteca.ConsoleApp.ModuloUsuario.Usuario">
-    <Position X="9.25" Y="0.5" Width="1.5" />
+    <Position X="13" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAQAAAIAkAAAgAAAAAAAAAAAAAAAQAAAgAAA=</HashCode>
       <FileName>ModuloUsuario\Usuario.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Biblioteca.ConsoleApp.Compartilhado.EntidadeBase&lt;TEntidade&gt;">
-    <Position X="11.25" Y="0.5" Width="1.5" />
+    <Position X="15" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAgA=</HashCode>
       <FileName>Compartilhado\EntidadeBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Biblioteca.ConsoleApp.ModuloUsuario.RepositorioUsuario">
-    <Position X="1.75" Y="0.75" Width="1.5" />
+    <Position X="7" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAIAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModuloUsuario\RepositorioUsuario.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Biblioteca.ConsoleApp.Emprestimo.RepositorioEmprestimo">
-    <Position X="4" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Emprestimo\RepositorioEmprestimo.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Biblioteca.ConsoleApp.ModuloLivro.RepositorioLivro">
-    <Position X="6" Y="0.75" Width="1.5" />
+    <Position X="11" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModuloLivro\RepositorioLivro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.ConsoleApp.ModuloEmprestimo.RepositorioEmprestimo">
+    <Position X="9" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModuloEmprestimo\RepositorioEmprestimo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.ConsoleApp.ModuloEmprestimo.Emprestimo">
+    <Position X="15" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAFAABAAAAAQAAAAAQAAAAAAAAgAAA=</HashCode>
+      <FileName>ModuloEmprestimo\Emprestimo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.ConsoleApp.Compartilhado.CLIBase">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAIAAEAAAQAAAAAEAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Compartilhado\CLIBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.ConsoleApp.ModuloUsuario.CLIUsuario">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAACAAAAAAAAQAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>ModuloUsuario\CLIUsuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.ConsoleApp.ModuloLivro.CLILivro">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAgAAAAAAEAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>ModuloLivro\CLILivro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca.ConsoleApp.ModuloEmprestimo.CLIEmprestimo">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModuloEmprestimo\CLIEmprestimo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
