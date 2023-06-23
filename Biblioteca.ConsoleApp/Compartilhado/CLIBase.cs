@@ -11,9 +11,9 @@ namespace Biblioteca.ConsoleApp.Compartilhado
 {
     public class CLIBase
     {
-        protected RepositorioEmprestimo repEmprestimo;
-        protected RepositorioLivro repLivro;
-        protected RepositorioUsuario repUsuario;
+        protected RepositorioBase<Emprestimo> repEmprestimo;
+        protected RepositorioBase<Livro> repLivro;
+        protected RepositorioBase<Usuario> repUsuario;
 
 
         public void ListarUsuarios(string msg = "")

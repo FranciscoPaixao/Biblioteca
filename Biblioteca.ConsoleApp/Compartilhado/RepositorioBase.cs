@@ -7,41 +7,58 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.ConsoleApp.Compartilhado
 {
-    public abstract class RepositorioBase<TEntidade> where TEntidade : EntidadeBase<TEntidade>
+    public class RepositorioBase<TEntidade> where TEntidade : EntidadeBase<TEntidade>
     {
         protected List<TEntidade> listaRegistros;
         protected int contadorRegistros;
         public RepositorioBase()
         {
-            this.listaRegistros = new List<TEntidade>();
+            this.listaRegistros = new();
             this.contadorRegistros = 0;
         }
-        public void Inserir(TEntidade registro)
+        public bool Inserir(TEntidade registro)
         {
-            registro.id = this.contadorRegistros;
-            this.listaRegistros.Add(registro);
-            this.contadorRegistros++;
-        }
-        public void Editar(TEntidade registro) { 
-            TEntidade registroAntigo = this.SelecionarPorId(registro.id);
-            registroAntigo.AtualizarInformacoes(registro);
-        }
-        public void Excluir(int id)
-        {
-            TEntidade registro = this.SelecionarPorId(id);
-            this.listaRegistros.Remove(registro);
-        }
-        public List<TEntidade> SelecionarTodos() => this.listaRegistros;
-        public TEntidade SelecionarPorId(int id) => this.listaRegistros.FirstOrDefault(x => x.id == id);
-        public TEntidade SelecionarPorDocumentoIdentificador(string documentoIdentificador) => this.listaRegistros.FirstOrDefault(x => x.ObterPropiedadeIndividualizadora() == documentoIdentificador);
-
-        public virtual bool ehDuplicado(TEntidade entidade) {
-            int quantidade = listaRegistros.Count(x => x.ObterPropiedadeIndividualizadora() == entidade.ObterPropiedadeIndividualizadora());
-            if (quantidade > 1)
+            if (ehDuplicado(registro) > 0)
             {
-                return true;
+                return false;
             }
-            return false;
+            registro.id = this.contadorRegistros;
+
+            this.listaRegistros.Add(registro);
+
+            this.contadorRegistros++;
+
+            return true;
+        }
+        public bool Editar(TEntidade registro) { 
+
+            TEntidade registroAntigo = this.SelecionarPorId(registro.id);
+
+            TEntidade tempRegistroAntigo = (TEntidade)registroAntigo.Clone();
+
+            registroAntigo.AtualizarInformacoes(registro);
+
+            int quantidadeIgual = ehDuplicado(registro);
+
+            if(quantidadeIgual > 1)
+            {
+                registroAntigo.AtualizarInformacoes(tempRegistroAntigo);
+                return false;
+            }
+            return true;
+        }
+        public bool Excluir(int id)
+        {
+            TEntidade registro = SelecionarPorId(id);
+            return listaRegistros.Remove(registro);
+        }
+        public List<TEntidade> SelecionarTodos() => listaRegistros;
+        public TEntidade SelecionarPorId(int id) => listaRegistros.FirstOrDefault(x => x.id == id);
+        public TEntidade SelecionarPorPropiedadeUnica(string propiedadeUnica) => listaRegistros.FirstOrDefault(x => x.ObterPropiedadeUnica() == propiedadeUnica);
+
+        public virtual int ehDuplicado(TEntidade entidade)
+        {
+            return listaRegistros.Count(x => x.ObterPropiedadeUnica() == entidade.ObterPropiedadeUnica());
         }
     }
 }

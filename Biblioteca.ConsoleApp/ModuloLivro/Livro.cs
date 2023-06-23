@@ -54,7 +54,7 @@ namespace Biblioteca.ConsoleApp.ModuloLivro
             }
         }
 
-        public override string ObterPropiedadeIndividualizadora() => this.isbn;
+        public override string ObterPropiedadeUnica() => this.isbn;
 
         public override string ToString()
         {

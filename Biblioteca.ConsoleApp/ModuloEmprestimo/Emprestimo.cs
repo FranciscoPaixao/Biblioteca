@@ -32,7 +32,10 @@ namespace Biblioteca.ConsoleApp.ModuloEmprestimo
 
         }
 
-        public override string ObterPropiedadeIndividualizadora() => id.ToString();
+        public override string ObterPropiedadeUnica()
+        {
+            return usuario.id.ToString() + livro.id.ToString();
+        }
 
         public override string ToString()
         {

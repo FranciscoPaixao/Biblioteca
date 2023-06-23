@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.ConsoleApp.Compartilhado
 {
-    public abstract class EntidadeBase<TEntidade>
+    public abstract class EntidadeBase<TEntidade> : ICloneable
     {
         public int id { get; set; }
 
         public abstract void AtualizarInformacoes(TEntidade entidade);
-        public abstract string ObterPropiedadeIndividualizadora();
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
+
+        public abstract string ObterPropiedadeUnica();
     }
 }

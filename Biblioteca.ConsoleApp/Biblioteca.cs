@@ -1,4 +1,5 @@
-﻿using Biblioteca.ConsoleApp.ModuloEmprestimo;
+﻿using Biblioteca.ConsoleApp.Compartilhado;
+using Biblioteca.ConsoleApp.ModuloEmprestimo;
 using Biblioteca.ConsoleApp.ModuloLivro;
 using Biblioteca.ConsoleApp.ModuloUsuario;
 using System;
@@ -11,9 +12,9 @@ namespace Biblioteca.ConsoleApp
 {
     public class Biblioteca
     {
-        RepositorioEmprestimo repositorioEmprestimo;
-        RepositorioLivro repositorioLivro;
-        RepositorioUsuario repositorioUsuario;
+        RepositorioBase<Emprestimo> repositorioEmprestimo;
+        RepositorioBase<Livro> repositorioLivro;
+        RepositorioBase<Usuario> repositorioUsuario;
 
         CLIEmprestimo cliEmprestimo;
         CLILivro cliLivro;

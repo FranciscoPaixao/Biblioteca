@@ -9,7 +9,7 @@ namespace Biblioteca.ConsoleApp.ModuloUsuario
 {
     public class CLIUsuario : CLIBase
     {
-        public CLIUsuario(RepositorioUsuario repUsuario)
+        public CLIUsuario(RepositorioBase<Usuario> repUsuario)
         {
             this.repUsuario = repUsuario;
         }

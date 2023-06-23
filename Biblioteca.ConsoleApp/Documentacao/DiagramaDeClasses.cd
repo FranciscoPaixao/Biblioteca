@@ -3,56 +3,36 @@
   <Class Name="Biblioteca.ConsoleApp.Compartilhado.RepositorioBase&lt;TEntidade&gt;">
     <Position X="9" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAAAAAMAAAACQAAAAACAAABAAAAAAEQAAA=</HashCode>
+      <HashCode>AAAIBAAAAAAAAAAMAAAAAQAAAAACAAABAAAAAAEQAAA=</HashCode>
       <FileName>Compartilhado\RepositorioBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Biblioteca.ConsoleApp.ModuloLivro.Livro">
     <Position X="17" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQgAAAAEAAABAAAAAABgAAAAAAAAEAAoAAA=</HashCode>
+      <HashCode>AAAAAAAAAAgAAAAEAAABAAAAAADgAAAAAAAAEAAoAAA=</HashCode>
       <FileName>ModuloLivro\Livro.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Biblioteca.ConsoleApp.ModuloUsuario.Usuario">
     <Position X="13" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAAAQAAAIAkAAAgAAAAAAAAAAAAAAAQAAAgAAA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAIAkAAAgAAAAAACAAAAAAAAQAAAgAAA=</HashCode>
       <FileName>ModuloUsuario\Usuario.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Biblioteca.ConsoleApp.Compartilhado.EntidadeBase&lt;TEntidade&gt;">
     <Position X="15" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAgA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAgAhA=</HashCode>
       <FileName>Compartilhado\EntidadeBase.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="Biblioteca.ConsoleApp.ModuloUsuario.RepositorioUsuario">
-    <Position X="7" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAIAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ModuloUsuario\RepositorioUsuario.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Biblioteca.ConsoleApp.ModuloLivro.RepositorioLivro">
-    <Position X="11" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AQAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ModuloLivro\RepositorioLivro.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Biblioteca.ConsoleApp.ModuloEmprestimo.RepositorioEmprestimo">
-    <Position X="9" Y="4" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ModuloEmprestimo\RepositorioEmprestimo.cs</FileName>
-    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Biblioteca.ConsoleApp.ModuloEmprestimo.Emprestimo">
     <Position X="15" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAAFAABAAAAAQAAAAAQAAAAAAAAgAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAFAABAAAAAQACAAAQAAAAAAAAgAAA=</HashCode>
       <FileName>ModuloEmprestimo\Emprestimo.cs</FileName>
     </TypeIdentifier>
   </Class>

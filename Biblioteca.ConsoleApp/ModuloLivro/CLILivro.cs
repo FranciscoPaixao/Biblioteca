@@ -10,7 +10,7 @@ namespace Biblioteca.ConsoleApp.ModuloLivro
 {
     public class CLILivro : CLIBase
     {
-        public CLILivro(RepositorioLivro repLivro)
+        public CLILivro(RepositorioBase<Livro> repLivro)
         {
             this.repLivro = repLivro;
         }

@@ -12,7 +12,7 @@ namespace Biblioteca.ConsoleApp.ModuloEmprestimo
     public class CLIEmprestimo : CLIBase
     {
 
-        public CLIEmprestimo(RepositorioEmprestimo repEmprestimo, RepositorioUsuario repUsuario, RepositorioLivro repLivro)
+        public CLIEmprestimo(RepositorioBase<Emprestimo> repEmprestimo, RepositorioBase<Usuario> repUsuario, RepositorioBase<Livro> repLivro)
         {
             this.repEmprestimo = repEmprestimo;
             this.repUsuario = repUsuario;
@@ -71,7 +71,7 @@ namespace Biblioteca.ConsoleApp.ModuloEmprestimo
             {
                 Console.WriteLine("Digite o RG do usuario:");
                 string RG = Console.ReadLine();
-                usuario = repUsuario.SelecionarPorRG(RG);
+                usuario = repUsuario.SelecionarPorPropiedadeUnica(RG);
                 if (usuario == null)
                 {
                     Console.WriteLine("Usuario não encontrado!");
@@ -85,7 +85,7 @@ namespace Biblioteca.ConsoleApp.ModuloEmprestimo
             {
                 Console.WriteLine("Digite o ISBN do livro:");
                 string isbn = Console.ReadLine();
-                livro = repLivro.SelecionarPorISBN(isbn);
+                livro = repLivro.SelecionarPorPropiedadeUnica(isbn);
                 if (livro == null)
                 {
                     Console.WriteLine("Livro não encontrado!");
