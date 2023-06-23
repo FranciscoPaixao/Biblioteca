@@ -29,6 +29,8 @@ namespace Biblioteca.ConsoleApp
             cliUsuario = new(repositorioUsuario);
             cliEmprestimo = new(repositorioEmprestimo, repositorioUsuario, repositorioLivro);
 
+            // Inserção de dados para testes
+            /*
             repositorioUsuario.Inserir(new Usuario(nome: "Fulano", email: "fulano@gmail.com", telefone: "5685689567", numeroRG: "456453456", endereco: "Rua 1"));
             repositorioUsuario.Inserir(new Usuario(nome: "Ciclano", email: "ciclano@gmail.com", telefone: "658568568", numeroRG: "45756756", endereco: "Rua 2"));
 
@@ -37,6 +39,7 @@ namespace Biblioteca.ConsoleApp
 
             repositorioEmprestimo.Inserir(new Emprestimo(repositorioUsuario.SelecionarPorId(0), repositorioLivro.SelecionarPorId(0 )));
             repositorioEmprestimo.Inserir(new Emprestimo(repositorioUsuario.SelecionarPorId(1), repositorioLivro.SelecionarPorId(1)));
+            */
         }
         public void MenuPrincipal()
         {

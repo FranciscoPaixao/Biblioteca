@@ -52,7 +52,7 @@ namespace Biblioteca.ConsoleApp.ModuloUsuario
             }
         }
 
-        public override string ObterPropiedadeUnica() => numeroRG;
+        public override string ObterPropriedadeUnica() => numeroRG;
 
         public override string ToString()
         {

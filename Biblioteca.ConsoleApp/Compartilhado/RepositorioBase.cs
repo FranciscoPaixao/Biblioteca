@@ -54,11 +54,11 @@ namespace Biblioteca.ConsoleApp.Compartilhado
         }
         public List<TEntidade> SelecionarTodos() => listaRegistros;
         public TEntidade SelecionarPorId(int id) => listaRegistros.FirstOrDefault(x => x.id == id);
-        public TEntidade SelecionarPorPropiedadeUnica(string propiedadeUnica) => listaRegistros.FirstOrDefault(x => x.ObterPropiedadeUnica() == propiedadeUnica);
+        public TEntidade SelecionarPorPropiedadeUnica(string propiedadeUnica) => listaRegistros.FirstOrDefault(x => x.ObterPropriedadeUnica() == propiedadeUnica);
 
         public virtual int ehDuplicado(TEntidade entidade)
         {
-            return listaRegistros.Count(x => x.ObterPropiedadeUnica() == entidade.ObterPropiedadeUnica());
+            return listaRegistros.Count(x => x.ObterPropriedadeUnica() == entidade.ObterPropriedadeUnica());
         }
     }
 }
